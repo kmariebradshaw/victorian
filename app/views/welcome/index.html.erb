@@ -5,6 +5,7 @@
 	<div>
 		<h2 class="tac nm">Come take a class with us!</h2>
 		<p class="tac">We have the largest offering of glass from which<br> to choose this side of the Chicago area.</p>
+		<div class="button"><p class="tac text-white nm">Class Schedule</p></div>
 	</div>
 </section>
 <%= image_tag("glass.jpg", :alt => "window") %>
@@ -15,10 +16,18 @@
 
 <style>
 	section { margin: 10px 0; }
-	grid-img { 
-		margin: 10px 0;
+	img { 
+		margin-bottom: 5px;
 		width: 100%;
 	}
+	.button  {
+    padding: 15px;
+    text-align: center;
+    min-width: fit-content;
+    width: 165px;
+    margin: 0 auto;
+    background-color: #b55f3b;
+}
 	.text-accent {
 		background-color: rgba(236,206,196,0.95);
 		padding: 50px;

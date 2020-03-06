@@ -13,28 +13,33 @@
   h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
   nav { 
     height: calc(100vh - 55px);
-    width: 26%;
+    width: 20%;
     min-width: fit-content;
     position: fixed; 
     background-color: white;
-    padding: 20px;
+    padding: 50px;
   }
   
   .tac { text-align: center; }
   .nm { margin: 0; }
   .main-nav {
-    font-size: 14pt;
+    margin-bottom: 1.13333rem;
+    font-size: 1rem;
+    line-height: 1.26667rem;
+    letter-spacing: 0.06667rem;
     text-transform: uppercase;
-    margin: 50px 0;
-  }
+    padding: 25px 0;
+}
   ul li { 
     list-style: none; 
-    line-height: 1.5;
+    line-height: 2.5;
   }
   ul { padding-left: 0; }
   .sub-nav {
     margin: 50px 0 ;
-    font-size: 12pt;
+    font-size: 0.93333rem;
+    line-height: 1.13333rem;
+    letter-spacing: 0.03333rem;
   }
   a { color: #606060 ; text-decoration: none;}
   .social-icon { 
@@ -49,6 +54,8 @@
   main { width: 80%;
     margin-left: calc(30% + 10px);
    }
+   nav p {     font-size: 0.93333rem;
+}
 
    	#atf {
 		height: calc(100vh - 15px);
