@@ -10,6 +10,69 @@
   </head>
 
   <body>
+    <nav>
+      <h1 class="logo">Victorian House</h1>
+      
+      <ul class="main-nav">
+        <li><a href="#">Lookbook</a></li>
+        <li><a href="#">Journal</a></li>
+      </ul>
+      <ul class="sub-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>408 E. Main St.,<br>   
+        Mahomet, Il 61853</p>
+      <a href="tel:217-586-4834"><p>217-586-4834</p></a>
+      <%= image_tag "fb.png", :class=>"icon" %>
+      <%= image_tag "twitter.png", :class=>"icon" %>
+      <%= image_tag "pinterest.png", :class=>"icon" %>
+      <%= image_tag "instagram.png", :class=>"icon" %>
+      <br>
+      <%= image_tag "visa.png", :class=>"icon" %>
+      <%= image_tag "mastercard.png", :class=>"icon" %>
+      <%= image_tag "amex.png", :class=>"icon" %>
+      <%= image_tag "discover.png", :class=>"icon" %>
+      <br>
+      <p class="subscript">Copyright © 2020 Victorian House.</p>
+    </nav>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
+
+
+<style>
+  .subscript { font-size: 10pt; }
+  body { 
+    display: flex; 
+    align-items: flex-start;
+    color: #606060;
+    background-color: #efe7e4;
+  }
+  nav { 
+    height: 100vh;
+    width: 30%;
+    position: fixed; 
+    background-color: white;
+    padding: 20px;
+  }
+  .tac { text-align: center; }
+  .nm { margin: 0; }
+  .main-nav {
+    font-size: 16pt;
+    text-transform: uppercase;
+    margin: 20px;
+  }
+  ul li { 
+    list-style: none; 
+    padding-left: 0; 
+  }
+  .sub-nav {
+    margin: 20px;
+  }
+  .icon { max-width: 20px; }
+
+  </style>
+
