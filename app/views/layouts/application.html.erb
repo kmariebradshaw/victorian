@@ -4,6 +4,7 @@
     <title>Victorianhouse</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<link href="https://fonts.googleapis.com/css?family=Handlee|Varela+Round&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -25,7 +26,6 @@
         Mahomet, Il 61853</p>
       <a href="tel:217-586-4834"><p>217-586-4834</p></a>
       <%= image_tag "fb.png", :class=>"icon" %>
-      <%= image_tag "twitter.png", :class=>"icon" %>
       <%= image_tag "pinterest.png", :class=>"icon" %>
       <%= image_tag "instagram.png", :class=>"icon" %>
       <br>
@@ -50,7 +50,9 @@
     align-items: flex-start;
     color: #606060;
     background-color: #efe7e4;
+    font-family: 'Varela Round', sans-serif;
   }
+  h1, h2, h3, h4, h5 { font-family: 'Handlee', cursive; }
   nav { 
     height: 100vh;
     width: 30%;
@@ -72,7 +74,10 @@
   .sub-nav {
     margin: 20px;
   }
-  .icon { max-width: 20px; }
+  .icon { 
+    max-width: 20px; 
+    margin: 10px;
+  }
 
   </style>
 
