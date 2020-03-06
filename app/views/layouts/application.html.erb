@@ -4,7 +4,7 @@
     <title>Victorianhouse</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-<link href="https://fonts.googleapis.com/css?family=Handlee|Varela+Round&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Varela+Round&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,6 +12,7 @@
 
   <body>
     <nav>
+      <div>
       <h1 class="logo">Victorian House</h1>
       
       <ul class="main-nav">
@@ -25,16 +26,17 @@
       <p>408 E. Main St.,<br>   
         Mahomet, Il 61853</p>
       <a href="tel:217-586-4834"><p>217-586-4834</p></a>
-      <%= image_tag "fb.png", :class=>"icon" %>
-      <%= image_tag "pinterest.png", :class=>"icon" %>
-      <%= image_tag "instagram.png", :class=>"icon" %>
+      <%= image_tag "fb.png", :class=>"social-icon" %>
+      <%= image_tag "pinterest.png", :class=>"social-icon" %>
+      <%= image_tag "instagram.png", :class=>"social-icon" %>
       <br>
-      <%= image_tag "visa.png", :class=>"icon" %>
-      <%= image_tag "mastercard.png", :class=>"icon" %>
-      <%= image_tag "amex.png", :class=>"icon" %>
-      <%= image_tag "discover.png", :class=>"icon" %>
+      <%= image_tag "visa.png", :class=>"payment-icon" %>
+      <%= image_tag "mastercard.png", :class=>"payment-icon" %>
+      <%= image_tag "amex.png", :class=>"payment-icon" %>
+      <%= image_tag "discover.png", :class=>"payment-icon" %>
       <br>
       <p class="subscript">Copyright © 2020 Victorian House.</p>
+      </div>
     </nav>
     <main>
     <%= yield %>
@@ -52,32 +54,42 @@
     background-color: #efe7e4;
     font-family: 'Varela Round', sans-serif;
   }
-  h1, h2, h3, h4, h5 { font-family: 'Handlee', cursive; }
+  h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
   nav { 
-    height: 100vh;
-    width: 30%;
+    height: calc(100vh - 55px);
+    width: 20%;
+    min-width: fit-content;
     position: fixed; 
     background-color: white;
     padding: 20px;
   }
+  a 
   .tac { text-align: center; }
   .nm { margin: 0; }
   .main-nav {
     font-size: 16pt;
     text-transform: uppercase;
-    margin: 20px;
+    margin: 50px 0;
   }
   ul li { 
     list-style: none; 
-    padding-left: 0; 
+    line-height: 1.5;
   }
+  ul { padding-left: 0; }
   .sub-nav {
-    margin: 20px;
+    margin: 50px 0 ;
+    font-size: 14pt;
   }
-  .icon { 
+  a { color: #606060 ; text-decoration: none;}
+  .social-icon { 
     max-width: 20px; 
-    margin: 10px;
+    margin: 10px 10px 10px 0
   }
+    .payment-icon { 
+    max-width: 40px; 
+    margin: 10px 10px 10px 0
+  }
+  .logo { font-size: 32pt; }
 
   </style>
 
