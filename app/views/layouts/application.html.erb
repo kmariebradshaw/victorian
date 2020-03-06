@@ -4,12 +4,92 @@
     <title>Victorianhouse</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Varela+Round&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav>
+      <div>
+      <h1 class="logo">Victorian House</h1>
+      
+      <ul class="main-nav">
+        <li><a href="#">Lookbook</a></li>
+        <li><a href="#">Journal</a></li>
+      </ul>
+      <ul class="sub-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>408 E. Main St.,<br>   
+        Mahomet, Il 61853</p>
+      <a href="tel:217-586-4834"><p>217-586-4834</p></a>
+      <%= image_tag "fb.png", :class=>"social-icon" %>
+      <%= image_tag "pinterest.png", :class=>"social-icon" %>
+      <%= image_tag "instagram.png", :class=>"social-icon" %>
+      <br>
+      <%= image_tag "visa.png", :class=>"payment-icon" %>
+      <%= image_tag "mastercard.png", :class=>"payment-icon" %>
+      <%= image_tag "amex.png", :class=>"payment-icon" %>
+      <%= image_tag "discover.png", :class=>"payment-icon" %>
+      <br>
+      <p class="subscript">Copyright © 2020 Victorian House.</p>
+      </div>
+    </nav>
+    <main>
     <%= yield %>
+    </main>
   </body>
 </html>
+
+
+<style>
+  .subscript { font-size: 10pt; }
+  body { 
+    display: flex; 
+    align-items: flex-start;
+    color: #606060;
+    background-color: #efe7e4;
+    font-family: 'Varela Round', sans-serif;
+  }
+  h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
+  nav { 
+    height: calc(100vh - 55px);
+    width: 20%;
+    min-width: fit-content;
+    position: fixed; 
+    background-color: white;
+    padding: 20px;
+  }
+  a 
+  .tac { text-align: center; }
+  .nm { margin: 0; }
+  .main-nav {
+    font-size: 16pt;
+    text-transform: uppercase;
+    margin: 50px 0;
+  }
+  ul li { 
+    list-style: none; 
+    line-height: 1.5;
+  }
+  ul { padding-left: 0; }
+  .sub-nav {
+    margin: 50px 0 ;
+    font-size: 14pt;
+  }
+  a { color: #606060 ; text-decoration: none;}
+  .social-icon { 
+    max-width: 20px; 
+    margin: 10px 10px 10px 0
+  }
+    .payment-icon { 
+    max-width: 40px; 
+    margin: 10px 10px 10px 0
+  }
+  .logo { font-size: 32pt; }
+
+  </style>
+
